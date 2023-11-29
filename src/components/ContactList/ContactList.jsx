@@ -14,10 +14,14 @@ const ContactList = () => {
     <List>
       {contacts.map(contact => (
         <Item key={contact.id}>
-          {contact.name + ' : ' + contact.number}
+          {contact.name + ' : ' + contact.phone}
           {
             // Button to delete a contact
-            <Button type="button" name="delete" onClick={() => dispatch(deleteContacts(contact.id))}>
+            <Button
+              type="button"
+              name="delete"
+              onClick={() => dispatch(deleteContacts(contact.id))}
+            >
               <DeleteIcon fill="#000000" width="20" height="20" />
               delete
             </Button>
